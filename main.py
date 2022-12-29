@@ -1,8 +1,5 @@
 import matplotlib.pyplot as plt
 
-num = input("What number?: ")
-lst = []
-
 def mainLoop(sum):
   outputNum = int(sum)
   lst.append(outputNum)
@@ -18,11 +15,15 @@ def mainLoop(sum):
   else:
     mainLoop(outputNum)
 
-mainLoop(num)
-
-print(lst)
-
-plt.plot(lst, 'r--')
-plt.xlabel("Steps")
-plt.ylabel("Step value")
-plt.show()
+if __name__ == "__main__":
+  num = input("What number?: ")
+  lst = []
+  
+  mainLoop(num)
+  
+  print(lst)
+  
+  plt.plot(lst, 'r--')
+  plt.xlabel("Steps")
+  plt.ylabel("Step value")
+  plt.show()
